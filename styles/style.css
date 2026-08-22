@@ -292,9 +292,9 @@ ol {
 
 .more-button {
   flex-shrink: 0;
-  align-self: stretch;      
-  margin-inline-start: 2px; 
-  margin-inline-end: 7px;   
+  align-self: stretch;
+  margin-inline-start: 2px;
+  margin-inline-end: 7px;
   margin-block-end: 2px;
   block-size: 34px;
 }
