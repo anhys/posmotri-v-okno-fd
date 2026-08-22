@@ -101,6 +101,7 @@ ol {
 
 .result__video {
   display: block;
+  object-position: center;
   object-fit: cover;
   inline-size: 100%;
   block-size: 100%;
@@ -142,7 +143,7 @@ ol {
   margin-block-end: 5px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
 }
 
 .title {
@@ -150,7 +151,7 @@ ol {
   font-family: 'Oswald', 'Roboto', Arial, sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 94%;
+  line-height: 0.94;
   text-transform: uppercase;
 }
 
@@ -170,7 +171,7 @@ ol {
   font-family: 'Oswald', 'Roboto', Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 100%;
+  line-height: 1;
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -179,7 +180,7 @@ ol {
 .content__video-card-description {
   display: -webkit-box;
   overflow: hidden;
-  line-height: 16px;
+  line-height: 0.89;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
@@ -217,7 +218,7 @@ ol {
   color: #fff;
   font-family: inherit;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
   background-color: #1b1919;
   inline-size: 225px;
   block-size: 27px;
@@ -278,7 +279,7 @@ ol {
   font-family: 'Fira Sans Condensed', 'Roboto', Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
   text-align: center;
   background-color: transparent;
   cursor: pointer;
@@ -335,4 +336,5 @@ ol {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
