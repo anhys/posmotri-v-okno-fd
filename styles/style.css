@@ -60,7 +60,6 @@ ol {
   align-items: flex-end;
   gap: 30px;
   inline-size: 1140px;
-  block-size: 534px;
 }
 
 .result {
@@ -151,7 +150,7 @@ ol {
   font-family: 'Oswald', 'Roboto', Arial, sans-serif;
   font-weight: 700;
   font-size: 75px;
-  line-height: 0.94;
+  line-height: 0.9333;
   text-transform: uppercase;
 }
 
@@ -208,7 +207,7 @@ ol {
   display: flex;
   align-items: center;
   gap: 5px;
-  width: fit-content;
+  inline-size: fit-content;
   cursor: pointer;
 }
 
@@ -220,8 +219,8 @@ ol {
   font-size: 18px;
   line-height: 1.22;
   background-color: #1b1919;
-  inline-size: 225px;
-  block-size: 27px;
+  min-inline-size: 225px;
+  min-block-size: 27px;
   appearance: none;
 }
 
@@ -256,12 +255,20 @@ ol {
   block-size: 100%;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+.search-form__checkbox-list .search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__checkbox-list .search-form__label:active .search-form__label-text {
+  text-decoration: none;
+}
+
+.search-form__checkbox-list .search-form__label:active .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
 
-.search-form__checkbox-list .search-form__label:hover .search-form__label-text {
-  text-decoration: underline;
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
@@ -283,12 +290,12 @@ ol {
   text-align: center;
   background-color: transparent;
   cursor: pointer;
+  block-size: 34px;
 }
 
 .search-form__submit-button {
   align-self: flex-end;
   inline-size: 194px;
-  block-size: 34px;
 }
 
 .more-button {
@@ -297,7 +304,6 @@ ol {
   margin-inline-start: 2px;
   margin-inline-end: 7px;
   margin-block-end: 2px;
-  block-size: 34px;
 }
 
 .button:hover {
@@ -306,6 +312,7 @@ ol {
 
 .button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .button:focus {
@@ -321,13 +328,18 @@ ol {
   background-color: #545050;
 }
 
+.content__card-link:hover .content__video-card-title,
+.content__card-link:hover .content__video-card-description {
+  text-decoration: underline;
+}
+
 .content__card-link:active {
   background-color: #545050;
 }
 
-.content__card-link:hover .content__video-card-title,
-.content__card-link:hover .content__video-card-description {
-  text-decoration: underline;
+.content__card-link:active .content__video-card-title,
+.content__card-link:active .content__video-card-description {
+  text-decoration: none;
 }
 
 .content__card-link:focus {
